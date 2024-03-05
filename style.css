@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* General Elements */
+
+.container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+
+/* Body */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+
+/* header */
+
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: blueviolet;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+
+.logo {
+    align-self: center;
+}
+
+.logo img {
+    width: 40px;
+    display: block;
+    padding: 0.5em;
+}
+
+.navigation {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: calc(100vh - 100%);
+    background-color: rgba(255, 99, 71, 1);
+    font-size: 1.25rem;
+}
+
+.navigation-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.navigation-item {
+    border-bottom: 1px solid #aeaeae;
+}
+
+.navigation-link {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 1em 0;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.navigation-link:hover {
+    background-color: black;
+}
+
+.menu-btn {
+    text-decoration: none;
+    color: white;
+    align-self: center;
+    padding: 1em;
+}
+
+.menu-btn:hover {
+    background-color: black;
+}
+
+.arrow-up {
+    display: none;
+}
+
+.dark-mode-wrapper {
+    align-self: center;
+}
+
+.dark-mode-wrapper img {
+    width: 20px;
+    display: block;
+    padding: 8px;
+}
+
+.dark-mode-wrapper img:hover{
+    background-color: gray;
+    border-radius: 18px;
+}
+
+
+.registration-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.registration-wrapper a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    background-color: rgba(255, 99, 71, 0.8);
+}
+
+.registration-wrapper a:hover {
+    background-color: rgba(255, 99, 71, 1);
+}
+
+.sign-up {
+    display: none;
+}
+
+.log-in {
+    margin-left: 5px;
+}
+
+@media (min-width: 420px) {
+    .sign-up {
+        display: block;
+    }
+}
+
+@media (min-width: 730px) {
+    .navigation {
+        display: block !important;
+        position: static;
+        background-color: transparent;
+        height: fit-content;
+        font-size: inherit;
+    }
+
+    .navigation-list {
+        flex-direction: row;
+    }
+
+    .navigation-item {
+        border-bottom: none;
+    }
+
+    .navigation-link {
+        width: auto;
+        margin: 0;
+        padding: 1em;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+}
